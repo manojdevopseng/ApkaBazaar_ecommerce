@@ -53,14 +53,14 @@ const Header = () => {
                             <CgShoppingCart />
                             {!!cartCount && <span>{cartCount}</span>}
                         </span>
-                        {
+                        {/* {
                             isAuthenticated && <h4>{user.name}</h4>
                         }
                         {isAuthenticated ?<div className="banner-cta logout" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
                             Logout
                         </div> : (
                         <div className="banner-cta login" onClick={() => loginWithRedirect()}>Log In</div>)
-                        }
+                        } */}
                     </div>
                 </div>
             </header>
