@@ -8,6 +8,7 @@ import SingleProduct from "./components/SingleProduct/SingleProduct";
 import Newsletter from "./components/Footer/Newsletter/Newsletter";
 import AppContext from "./utils/context";
 
+
 function App() {
     return (
             <BrowserRouter>

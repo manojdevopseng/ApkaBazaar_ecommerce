@@ -8,6 +8,9 @@ import Search from "./Search/Search";
 import { Context } from "../../utils/context";
 import Cart from "../Cart/Cart";
 import { useAuth0 } from "@auth0/auth0-react";
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import { Auth } from "aws-amplify";
+// import LoginLogoutComponent from '../LoginLogoutComponent';
 
 const Header = () => {
     const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
@@ -41,7 +44,7 @@ const Header = () => {
                         <li>Products</li>
                     </ul>
                     <div className="center" onClick={() => navigate("/")}>
-                        APKABAZAAR.
+                        APKABAZAAR
                     </div>
                     <div className="right">
                         <TbSearch onClick={() => setSearchModal(true)} />
@@ -53,14 +56,15 @@ const Header = () => {
                             <CgShoppingCart />
                             {!!cartCount && <span>{cartCount}</span>}
                         </span>
-                        {/* {
+
+                        {
                             isAuthenticated && <h4>{user.name}</h4>
                         }
                         {isAuthenticated ?<div className="banner-cta logout" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
                             Logout
                         </div> : (
                         <div className="banner-cta login" onClick={() => loginWithRedirect()}>Log In</div>)
-                        } */}
+                        }
                     </div>
                 </div>
             </header>
